@@ -1,0 +1,86 @@
+.header {
+    border-bottom: 1px solid $header-border-color;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+
+    &-row {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.site-nav {
+    display: flex;
+}
+
+.current {
+    position: relative;
+
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 1px;
+        width: calc(100% - 2px);
+        height: 4px;
+        background-color: $accent-color;
+        border-radius: 2px;
+    }
+}
+
+.site-nav .item:not(:last-child) {
+    margin-right: 50px;
+}
+
+.site-nav .link {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    color: $title-text-color;  
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        color: $accent-color;
+    }
+
+    & .current {
+        color: $accent-color;
+    }
+}
+
+.contacts-nav {
+    display: flex;
+    margin-left: auto;
+}
+
+.contacts-nav .link {
+    color: $primary-text-color;
+    fill: $primary-text-color;
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        color: $accent-color;
+        fill: $accent-color;
+    }
+}
+
+.contacts-nav .item:not(:last-child) {
+    margin-right: 30px;
+}
