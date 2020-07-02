@@ -33,12 +33,15 @@
 }
 
 .form-options {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     margin-top: 20px;
-    margin-left: 7px;
+
+    & label {
+        font-size: 12px;
+    }
 }
 
 .form-input {
@@ -180,6 +183,7 @@ textarea {
 }
 
 .agreement-link {
+    font-size: 12px;
     text-decoration: underline;
     color: $accent-color;
 }
