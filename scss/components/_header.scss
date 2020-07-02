@@ -2,48 +2,60 @@
     border-bottom: 1px solid $header-border-color;
 }
 
+.page-header {
+    position: relative;
+}
+
 .navigation {
     display: flex;
+    justify-content: center;
     align-items: center;
 
     &-row {
-        position: relative;
         display: flex;
         align-items: center;
     }
 }
 
 .site-nav {
-    // display: flex;
-    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 60px;
 
-    pointer-events: none;
+    & .item {
+        margin-bottom: 40px;
+    }
 }
 
-// .current {
-//     position: relative;
+.site-nav .link.current {
+    color: $accent-color;
+}
 
-//     &::after {
-//         content: '';
-//         display: block;
-//         position: absolute;
-//         bottom: 0;
-//         left: 1px;
-//         width: calc(100% - 2px);
-//         height: 4px;
-//         background-color: $accent-color;
-//         border-radius: 2px;
-//     }
-// }
+.current {
+    position: relative;
+
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 1px;
+        width: calc(100% - 2px);
+        height: 4px;
+        background-color: $accent-color;
+        border-radius: 2px;
+    }
+}
 
 // .site-nav .item:not(:last-child) {
 //     margin-right: 50px;
 // }
 
 .site-nav .link {
-    // display: block;
-    // padding-top: 32px;
-    // padding-bottom: 32px;
+    display: inline-flex;
+    padding-top: 8px;
+    padding-bottom: 8px;
 
     color: $title-text-color;  
 
@@ -64,16 +76,18 @@
 }
 
 .contacts-nav {
-    // display: flex;
-    margin-left: auto;
-
-    opacity: 0;
-    pointer-events: none;
+    // display: inline-flex;
+    // flex-direction: column;
+    text-align: center;
+    // margin-right: auto;
+    // margin-left: auto;
 }
 
 .contacts-nav .link {
     color: $primary-text-color;
     fill: $primary-text-color;
+
+    margin-bottom: 16px;
 
     font-weight: 500;
     font-size: 14px;
@@ -89,12 +103,9 @@
 }
 
 .header-button {
-    position: absolute;
     display: inline-flex;
     margin: 0;
     padding: 0;
-    top: 21px;
-    right: 10px;
     border: none;
     background-color: transparent;
 
@@ -116,6 +127,25 @@
     display: none;
 }
 
-// .contacts-nav .item:not(:last-child) {
-//     margin-right: 30px;
-// }
+.mobile-menu {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+    top: 63px;
+    left: 0;
+    width: 100%;
+    height: 393px;
+    background-color: $white-color;
+    z-index: 2;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &.is-open {
+        opacity: 1;
+        pointer-events: visible;
+        transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    } 
+}
+
+.contacts-nav .item:not(:last-child) {
+    margin-bottom: 16px;
+}

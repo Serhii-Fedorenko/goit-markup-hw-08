@@ -298,6 +298,9 @@ a {
 }
 
 .logo {
+  margin-top: 16px;
+  margin-bottom: 16px;
+  margin-right: 280px;
   color: #212121;
   font-family: Raleway, sans-serif;
   font-weight: 700;
@@ -313,17 +316,23 @@ a {
   border-bottom: 1px solid #ECECEC;
 }
 
+.page-header {
+  position: relative;
+}
+
 .navigation {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
 .navigation-row {
-  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -333,11 +342,47 @@ a {
 }
 
 .site-nav {
-  opacity: 0;
-  pointer-events: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  margin-top: 60px;
+}
+
+.site-nav .item {
+  margin-bottom: 40px;
+}
+
+.site-nav .link.current {
+  color: #2196F3;
+}
+
+.current {
+  position: relative;
+}
+
+.current::after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 1px;
+  width: calc(100% - 2px);
+  height: 4px;
+  background-color: #2196F3;
+  border-radius: 2px;
 }
 
 .site-nav .link {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding-top: 8px;
+  padding-bottom: 8px;
   color: #212121;
   font-weight: 500;
   font-size: 14px;
@@ -356,14 +401,13 @@ a {
 }
 
 .contacts-nav {
-  margin-left: auto;
-  opacity: 0;
-  pointer-events: none;
+  text-align: center;
 }
 
 .contacts-nav .link {
   color: #757575;
   fill: #757575;
+  margin-bottom: 16px;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -378,14 +422,11 @@ a {
 }
 
 .header-button {
-  position: absolute;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
   margin: 0;
   padding: 0;
-  top: 21px;
-  right: 10px;
   border: none;
   background-color: transparent;
 }
@@ -406,13 +447,37 @@ a {
   display: none;
 }
 
+.mobile-menu {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  top: 63px;
+  left: 0;
+  width: 100%;
+  height: 393px;
+  background-color: #FFFFFF;
+  z-index: 2;
+  -webkit-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-menu.is-open {
+  opacity: 1;
+  pointer-events: visible;
+  -webkit-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contacts-nav .item:not(:last-child) {
+  margin-bottom: 16px;
+}
+
 .hero {
   max-width: 1600px;
   max-height: 600px;
   text-align: center;
   padding-top: 200px;
   padding-bottom: 200px;
-  margin-bottom: 60px;
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.8)), to(rgba(47, 48, 58, 0.8))), url(../img/jpg/Header.jpg);
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url(../img/jpg/Header.jpg);
   background-position: center;
@@ -1088,7 +1153,7 @@ a {
 
 .comment-input {
   padding: 12px 16px;
-  width: 448px;
+  width: 370px;
   height: 120px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
@@ -1186,8 +1251,8 @@ textarea {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 528px;
-  height: 581px;
+  width: 450px;
+  height: 609px;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   background-color: #FFFFFF;
