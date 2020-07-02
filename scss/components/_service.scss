@@ -1,3 +1,9 @@
+.service {
+    @media (max-width:1200px) {
+        display: none;
+    }
+}
+
 .service-list {
     display: flex;
 

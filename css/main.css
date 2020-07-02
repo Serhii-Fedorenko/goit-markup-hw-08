@@ -270,6 +270,11 @@ body {
   }
 }
 
+.pad {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
 .container {
   padding-left: 15px;
   padding-right: 15px;
@@ -420,10 +425,21 @@ a {
       -ms-flex-pack: center;
           justify-content: center;
   margin-bottom: 30px;
-  width: 450px;
-  height: 120px;
   border-radius: 4px;
   background-color: #F5F4FA;
+}
+
+@media (min-width: 480px) {
+  .advantages-link {
+    width: 450px;
+    height: 120px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .service {
+    display: none;
+  }
 }
 
 .service-list {
@@ -482,15 +498,13 @@ a {
   margin-bottom: 50px;
   color: #212121;
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.67;
+  font-size: 28px;
+  line-height: 1.17;
   text-align: center;
 }
 
 .team-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: block;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -569,8 +583,8 @@ a {
   margin-bottom: 50px;
   color: #212121;
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.67;
+  font-size: 28px;
+  line-height: 1.17;
   text-align: center;
 }
 
@@ -578,6 +592,8 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .costumers-link {
@@ -593,7 +609,7 @@ a {
   border: 1px solid #AFB1B8;
   border-radius: 4px;
   fill: #AFB1B8;
-  width: 170px;
+  width: 210px;
   height: 90px;
   -webkit-transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -604,23 +620,27 @@ a {
   border: 1px solid #2196F3;
 }
 
-.costumers-list .item:not(:last-child) {
+.costumers-list .item {
   margin-right: 30px;
+  margin-bottom: 30px;
+}
+
+.costumers-list .item:nth-child(2n) {
+  margin-right: 0;
+}
+
+.costumers-list .item:last-child(-n +2) {
+  margin-bottom: 0px;
 }
 
 .footer {
   background-color: #2F303A;
 }
 
-.footer-headline {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  display: block;
-  margin-right: 69px;
-}
-
 .footer-logo {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
   color: #FFFFFF;
   font-family: Raleway, sans-serif;
   font-weight: 700;
@@ -682,12 +702,8 @@ a {
 }
 
 .box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding-top: 48px;
-  padding-bottom: 28px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .footer-link {
@@ -751,9 +767,6 @@ a {
 }
 
 .footer-field {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;

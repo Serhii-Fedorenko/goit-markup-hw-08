@@ -7,13 +7,13 @@
     color: $title-text-color;
 
     font-weight: 700;
-    font-size: 36px;
-    line-height: 1.67;
+    font-size: 28px;
+    line-height: 1.17;
     text-align: center;
 }
 
 .team-list {
-    display: flex;
+    display: block;
     justify-content: center;
 
     & .item {

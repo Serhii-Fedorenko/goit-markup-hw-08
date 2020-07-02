@@ -3,13 +3,14 @@
     color: $title-text-color;
 
     font-weight: 700;
-    font-size: 36px;
-    line-height: 1.67;
+    font-size: 28px;
+    line-height: 1.17;
     text-align: center;
 }
 
 .costumers-list {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .costumers-link {
@@ -19,7 +20,7 @@
     border: 1px solid $primary-border-color;
     border-radius: 4px;
     fill: $primary-border-color;
-    width: 170px;
+    width: 210px;
     height: 90px;
     transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),  fill 250ms cubic-bezier(0.4, 0, 0.2, 1) ;
 
@@ -30,6 +31,20 @@
     }
 }
 
-.costumers-list .item:not(:last-child) {
+.costumers-list .item {
     margin-right: 30px;
+    margin-bottom: 30px;
+
 }
+
+.costumers-list .item:nth-child(2n) {
+    margin-right: 0;
+}
+
+.costumers-list .item:last-child(-n +2) {
+    margin-bottom: 0px;
+}
+
+// .costumers-list .item:not(:last-child) {
+//     margin-right: 30px;
+// }
