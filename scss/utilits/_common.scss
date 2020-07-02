@@ -6,15 +6,19 @@ body {
     letter-spacing: 0.03em;
     font-size: 14px;
     line-height: 1.71;
+
+    @media (min-width: 480px) {
+        width: 480px;
+    }
 }
 
-.pad {
-    padding-top: 94px;
-    padding-bottom: 94px;
-}
+// .pad {
+//     padding-top: 94px;
+//     padding-bottom: 94px;
+// }
 
 .container {
-    width: 1200px;
+    // width: 1200px;
     padding-left: 15px;
     padding-right: 15px;
     margin-left: auto;
