@@ -282,6 +282,12 @@ body {
   }
 }
 
+@media (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+
 h1, h2, h2, h4, h5, h6 {
   margin-bottom: 0px;
   margin-top: 0px;
@@ -478,10 +484,16 @@ a {
   text-align: center;
   padding-top: 200px;
   padding-bottom: 200px;
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.8)), to(rgba(47, 48, 58, 0.8))), url(../img/jpg/Header.jpg);
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url(../img/jpg/Header.jpg);
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.8)), to(rgba(47, 48, 58, 0.8))), url(../img/jpg/headermobile.jpg);
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url(../img/jpg/headermobile.jpg);
   background-position: center;
   background-color: #757575;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+  .hero {
+    background-image: url(../img/jpg/headermobile@2x.jpg);
+  }
 }
 
 .hero-title {
@@ -637,10 +649,6 @@ a {
   border-radius: 0px 0px 4px 4px;
 }
 
-.team-list .item:not(:last-child) {
-  margin-right: 30px;
-}
-
 .team-img {
   margin-bottom: 30px;
 }
@@ -671,10 +679,6 @@ a {
       -ms-flex-pack: center;
           justify-content: center;
   margin-bottom: 36px;
-}
-
-.team-social li:not(:last-child) {
-  margin-right: 10px;
 }
 
 .team-link {
@@ -1034,7 +1038,6 @@ a {
 .portfolio-link {
   position: relative;
   display: block;
-  width: 370px;
   border: 1px solid #EEEEEE;
 }
 

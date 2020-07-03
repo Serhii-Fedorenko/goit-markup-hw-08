@@ -22,9 +22,9 @@
         border-radius: 0px 0px 4px 4px;
     }
 
-    & .item:not(:last-child) {
-        margin-right: 30px;
-    }
+    // & .item:not(:last-child) {
+    //     margin-right: 30px;
+    // }
 }
 
 .team-img {
@@ -57,9 +57,9 @@
     margin-bottom: 36px;
 }
 
-.team-social li:not(:last-child) {
-    margin-right: 10px;
-}
+// .team-social li:not(:last-child) {
+//     margin-right: 10px;
+// }
 
 .team-link {
     display: flex;

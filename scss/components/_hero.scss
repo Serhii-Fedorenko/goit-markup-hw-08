@@ -9,9 +9,13 @@
         $secondary-background-color, 
         $secondary-background-color
     ),
-    url(../img/jpg/Header.jpg);
+    url(../img/jpg/headermobile.jpg);
     background-position: center;
     background-color: $primary-text-color;
+
+    @media (min-resolution: 2dppx) {
+        background-image: url(../img/jpg/headermobile@2x.jpg);
+    }
 
     &-title {
         margin-bottom: 46px;
