@@ -13,4 +13,8 @@
     &-web {
         color: $accent-color;
     }
+
+    @media (min-width: 768px) {
+        margin-right: 0;
+    }
 }
