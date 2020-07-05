@@ -1,7 +1,6 @@
 .logo {
     margin-top: 16px;
     margin-bottom: 16px;
-    margin-right: 280px;
 
     color: $title-text-color;
 
@@ -15,6 +14,7 @@
     }
 
     @media (min-width: 768px) {
-        margin-right: 0;
+        margin-right: 81;
+        width: 250px;
     }
 }

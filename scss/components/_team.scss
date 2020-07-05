@@ -97,9 +97,11 @@
     margin-bottom: 36px;
 }
 
-// .team-social li:not(:last-child) {
-//     margin-right: 10px;
-// }
+@media screen and (min-width: 1200px) {
+  .team-social li:not(:last-child) {
+    margin-right: 10px;
+}
+}
 
 .team-link {
     display: flex;
@@ -111,6 +113,10 @@
     border-radius: 50%;
     fill: #AFB1B8;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),  fill 250ms cubic-bezier(0.4, 0, 0.2, 1) ;
+
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 0;
+    }
 
     &:hover,
     &:focus {
